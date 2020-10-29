@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: #24292e;
+}
+
+.strokes{
+    position: relative;
+    width: 60%;
+    height: 100vh;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strokes .group1{
+    width: 48%;
+    height: 100%;
+    position: relative;
+    /* border: 1px solid red;/ */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.strokes .group2{
+    width: 48%;
+    height: 100%;
+    position: relative;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+
+.strokes  .stroke-1,  .stroke-2, .stroke-3, .stroke-4{
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #2f363d;
+}
+.strokes .group1 .stroke-1{
+    transform: rotateZ(130deg) ;
+    animation-name: stroke1;
+    animation-duration: 1.5s;
+}
+.strokes .stroke-2{
+    transform: rotateZ(-130deg);
+    margin-top: 155px;
+    animation-name: stroke2;
+    animation-duration: 1.5s;
+}
+.strokes .stroke-3{
+    transform: rotateZ(130deg);
+    animation-name: stroke3;
+    animation-duration: 1.5s;
+}
+.strokes .stroke-4{
+    transform: rotateZ(-130deg);
+    margin-top: 155px;
+    animation-name: stroke4;
+    animation-duration: 1.5s;
+}
+
+
+@keyframes stroke1{
+    0%{
+        transform: rotateZ(130deg) translateX(-200px);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(130deg);
+    }
+}
+@keyframes stroke2{
+    0%{
+        transform: rotateZ(-130deg) translateX(-200px);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(-130deg);
+    }
+}
+@keyframes stroke3{
+    0%{
+        transform: rotateZ(130deg) translateX(-200px);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(-130deg);
+    }
+}
+@keyframes stroke4{
+    0%{
+        transform: rotateZ(-130deg)  translateX(-200px);
+        opacity: .5;
+    }
+    100%{
+        transform: translateX(-130deg);
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
